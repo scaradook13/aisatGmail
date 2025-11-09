@@ -69,7 +69,7 @@ const authController = {
         newOTP.save(),
         emailQueue.add("sendEmail", {
           email,
-          subject: "Account Verification",
+          subject: "Password Reset Request",
           templatePath: "OTP",
           templateData: { email, otp: generatedOTP },
         }),
